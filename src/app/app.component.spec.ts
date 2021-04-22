@@ -1,5 +1,9 @@
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
+import {GMapModule} from 'primeng/gmap';
+import { ToastModule } from 'primeng/toast';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -7,6 +11,11 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent
       ],
+      imports: [CUSTOM_ELEMENTS_SCHEMA,
+        GMapModule,
+        ToastModule,
+        FormsModule, ReactiveFormsModule
+      ]
     }).compileComponents();
   });
 
